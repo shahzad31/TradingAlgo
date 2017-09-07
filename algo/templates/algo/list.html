@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>Contact</title>
+</head>
+<body>
+<h1>Algorithms</h1>
+<ul>
+    {% for algo in object_list %}
+        <li>
+            <a href="{% url 'algo_chart' algo_id=algo.id %}">{{ algo.name }} - {{ algo.ticker }}</a>
+        </li>
+    {% empty %}
+        <li>No Algorithms yet.</li>
+    {% endfor %}
+</ul>
+
+<button><a href="{% url 'algo_create' %}">Create</a></button>
+</body>
+</html>
