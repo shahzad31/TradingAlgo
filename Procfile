@@ -1,1 +1,1 @@
-web: gunicorn wsgi:application
+web: gunicorn TradingAlgo.wsgi:application
